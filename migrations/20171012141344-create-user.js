@@ -1,7 +1,7 @@
 'use strict';
 
 // If using sequelize sync, migrations do not come into play. Just leaving this here if you decide
-// to keep using migrations
+// to try using migrations
 
 module.exports = {
   up: function(queryInterface, Sequelize) {
