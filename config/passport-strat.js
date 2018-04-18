@@ -1,13 +1,13 @@
-"use strict";
+'use strict';
 
 // This module will be executed in app.js.
 
 // module for creating a hash of passwords
-const bCrypt = require("bcrypt-nodejs");
-const passport = require("passport");
+const bCrypt = require('bcrypt-nodejs');
+const passport = require('passport');
 
 // initialize the passport-local strategy
-const { Strategy } = require("passport-local");
+const { Strategy } = require('passport-local');
 let User = null;
 
 // Then define our custom strategies with our instance of the LocalStrategy.
@@ -16,15 +16,15 @@ let User = null;
 const RegistrationStrategy = new Strategy(
   // arg 1: declare what request (req) fields our usernameField and passwordField (passport variables) are.
   {
-    usernameField: "email",
-    passwordField: "password",
+    usernameField: 'email',
+    passwordField: 'password',
     passReqToCallback: true // allows us to pass back the entire request to the callback,
     // which is particularly useful for signing up.
   },
   // arg2 callback, handle storing a user's details.
   (req, email, password, done) => {
-    console.log("local strat callback: password", email);
-    User = req.app.get("models").User; // this is made possible by line 14 in app.js: app.set('models', require('./models'));
+    console.log('local strat callback: password', email);
+    User = req.app.get('models').User; // this is made possible by line 14 in app.js: app.set('models', require('./models'));
 
     // add our hashed password generating function inside the callback function
     const generateHash = password => {
@@ -36,13 +36,13 @@ const RegistrationStrategy = new Strategy(
       where: { email } // remember, this is object literal shorthand. Same as { email: email}
     }).then(user => {
       if (user) {
-        console.log("user found, oops");
+        console.log('user found, oops');
 
         return done(null, false, {
-          message: "That email is already taken"
+          message: 'That email is already taken'
         });
       } else {
-        console.log("in the else");
+        console.log('in the else');
         const userPassword = generateHash(password); //function we defined above
         const data =
           // values come from the req.body, added by body-parser when register form request is submitted
@@ -59,7 +59,7 @@ const RegistrationStrategy = new Strategy(
             return done(null, false);
           }
           if (newUser) {
-            console.log("newUser", newUser);
+            console.log('newUser', newUser);
             return done(null, newUser);
           }
         });
@@ -73,12 +73,12 @@ const RegistrationStrategy = new Strategy(
 const LoginStrategy = new Strategy(
   {
     // by default, local strategy uses username and password, we will override with email
-    usernameField: "email",
-    passwordField: "password",
+    usernameField: 'email',
+    passwordField: 'password',
     passReqToCallback: true // allows us to pass back the entire request to the callback
   },
   (req, email, password, done) => {
-    User = req.app.get("models").User;
+    User = req.app.get('models').User;
     const isValidPassword = (userpass, password) => {
       // hashes the passed-in password and then compares it to the hashed password fetched from the db
       return bCrypt.compareSync(password, userpass);
@@ -86,7 +86,7 @@ const LoginStrategy = new Strategy(
 
     User.findOne({ where: { email } })
       .then(user => {
-        console.log("username stuff", user);
+        console.log('username stuff', user);
 
         if (!user) {
           return done(null, false, {
@@ -96,12 +96,12 @@ const LoginStrategy = new Strategy(
         }
         if (req.body.username != user.username) {
           return done(null, false, {
-            message: "Wrong username. Please try again"
+            message: 'Wrong username. Please try again'
           });
         }
         if (!isValidPassword(user.password, password)) {
           return done(null, false, {
-            message: "Incorrect password."
+            message: 'Incorrect password.'
           });
         }
         const userinfo = user.get(); // get returns the data about the object, separate from the rest of the instance Sequelize gives us after calling 'findOne()' above. Could also have added {raw: true} to the query to achieve the same thing
@@ -109,9 +109,9 @@ const LoginStrategy = new Strategy(
         return done(null, userinfo);
       })
       .catch(err => {
-        console.log("Error:", err);
+        console.log('Error:', err);
         return done(null, false, {
-          message: "Something went wrong with your sign in"
+          message: 'Something went wrong with your sign in'
         });
       });
   }
@@ -124,7 +124,7 @@ const LoginStrategy = new Strategy(
 //serialize. In this function, we will be saving the user id to the session in
 // req.session.passport.user
 passport.serializeUser((user, done) => {
-  console.log("hello, serialize");
+  console.log('hello, serialize');
 
   // This saves the whole user obj into the session cookie,
   // but typically you will see just user.id passed in.
@@ -145,5 +145,5 @@ passport.deserializeUser(({ id }, done) => {
 
 // Take the new strategies we just created and use them as middleware, so the http requests get piped through them. A POST to register or login will trigger a strategy, because we will call passport.authenticate in the auth ctrl.
 // The first argument is optional and it sets the name of the strategy.
-passport.use("local-signup", RegistrationStrategy);
-passport.use("local-signin", LoginStrategy);
+passport.use('local-signup', RegistrationStrategy);
+passport.use('local-signin', LoginStrategy);
