@@ -1,1 +1,3 @@
-{"orders":[{"userId":1,"paymentTypeId":8},{"userId":2,"paymentTypeId":5},{"userId":3,"paymentTypeId":7},{"userId":4,"paymentTypeId":7},{"userId":5,"paymentTypeId":3},{"userId":3,"paymentTypeId":9},{"userId":2,"paymentTypeId":6},{"userId":1,"paymentTypeId":5},{"userId":1,"paymentTypeId":6},{"userId":4,"paymentTypeId":5},{"userId":2,"paymentTypeId":6},{"userId":2,"paymentTypeId":5},{"userId":2,"paymentTypeId":8},{"userId":2,"paymentTypeId":9},{"userId":4,"paymentTypeId":7}]}
+{
+  "orders": [{ "userId": null, "paymentTypeId": null }]
+}

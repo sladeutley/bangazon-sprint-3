@@ -1,1 +1,14 @@
-{"paymentTypes":[{"name":"Visa","acct_num":"37840364","userId":2},{"name":"Visa","acct_num":"05390872","userId":3},{"name":"Master Card","acct_num":"98060857","userId":1},{"name":"Visa","acct_num":"02624932","userId":1},{"name":"Visa","acct_num":"91701073","userId":2},{"name":"Visa","acct_num":"82163370","userId":3},{"name":"Visa","acct_num":"26342835","userId":4},{"name":"Visa","acct_num":"32133841","userId":5},{"name":"Master Card","acct_num":"30422489","userId":2},{"name":"Visa","acct_num":"15738001","userId":5}]}
+{
+  "paymentTypes": [
+    { "name": "Visa", "acct_num": "37840364" },
+    { "name": "Visa", "acct_num": "05390872" },
+    { "name": "Master Card", "acct_num": "98060857" },
+    { "name": "Visa", "acct_num": "02624932" },
+    { "name": "Visa", "acct_num": "91701073" },
+    { "name": "Visa", "acct_num": "82163370" },
+    { "name": "Visa", "acct_num": "26342835" },
+    { "name": "Visa", "acct_num": "32133841" },
+    { "name": "Master Card", "acct_num": "30422489" },
+    { "name": "Visa", "acct_num": "15738001" }
+  ]
+}
