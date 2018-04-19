@@ -7,6 +7,7 @@ let { paymentTypes } = require('./seeders/payment-types');
 let { products } = require('./seeders/products');
 let { orders } = require('./seeders/orders');
 
+
 models.sequelize
   .sync({ force: true })
   .then(() => {
