@@ -6,6 +6,34 @@
       "username": "TastySteelPants",
       "email": "Aut dolorem maiminima.",
       "password": "775.00"
+    },
+    {
+      "first_name": "Mike",
+      "last_name": "Jones",
+      "username": "MJones",
+      "email": "mike@jones.com",
+      "password": "password1"
+    },
+    {
+      "first_name": "Damon",
+      "last_name": "Severson",
+      "username": "SuperFreak123",
+      "email": "1@1.com",
+      "password": "abc123"
+    },
+    {
+      "first_name": "Denise",
+      "last_name": "Apleton",
+      "username": "applebbbbb",
+      "email": "daa@es.net",
+      "password": "adasdedasdasd"
+    },
+    {
+      "first_name": "monster",
+      "last_name": "face",
+      "username": "monsterFace",
+      "email": "monster@face.com",
+      "password": "asdsdds"
     }
   ]
 }

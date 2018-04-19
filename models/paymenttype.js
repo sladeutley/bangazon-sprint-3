@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
     PaymentType.belongsTo(models.User, {
       foreignKey: 'userId'
     });
-    PaymentType.belongsTo(models.Order, {
+    PaymentType.hasOne(models.Order, {
       foreignKey: 'paymentTypeId'
     });
   };

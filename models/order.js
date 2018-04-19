@@ -6,7 +6,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: 'userId',
       onDelete: 'CASCADE'
     });
-    Order.hasOne(models.PaymentType, {
+    Order.belongsTo(models.PaymentType, {
       foreignKey: 'paymentTypeId'
     });
   };

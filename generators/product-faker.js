@@ -11,7 +11,7 @@ module.exports.generateProducts = (typesLen, usersLen) => {
 
   for (let i = 0; i < 25; i++) {
     let productTypeId = Math.floor(Math.random() * typesLen) + 1;
-    let userId = Math.floor(Math.random() * usersLen) + 1;
+    let userId = faker.random.number({ min: 1, max: 5 });
     let name = faker.commerce.productName();
     let description = faker.lorem.sentence();
     let price = faker.commerce.price();
