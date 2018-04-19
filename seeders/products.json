@@ -1,0 +1,209 @@
+{
+  "products": [
+    {
+      "productTypeId": 10,
+      "userId": 4,
+      "name": "Intelligent Metal Mouse",
+      "description":
+        "Cupiditate ullam libero vitae sit ex voluptate quaerat harum.",
+      "price": "468.00",
+      "quantity": 13320
+    },
+    {
+      "productTypeId": 7,
+      "userId": 4,
+      "name": "Tasty Fresh Ball",
+      "description": "Perspiciatis error non molestiae esse qui atque.",
+      "price": "293.00",
+      "quantity": 10654
+    },
+    {
+      "productTypeId": 10,
+      "userId": 3,
+      "name": "Rustic Soft Shirt",
+      "description": "Ut nam sed.",
+      "price": "428.00",
+      "quantity": 6668
+    },
+    {
+      "productTypeId": 10,
+      "userId": 1,
+      "name": "Sleek Wooden Chicken",
+      "description": "Rerum aut quia ratione minima fugit perspiciatis.",
+      "price": "773.00",
+      "quantity": 93614
+    },
+    {
+      "productTypeId": 4,
+      "userId": 2,
+      "name": "Unbranded Metal Tuna",
+      "description":
+        "Perspiciatis dolores autem quae quasi nulla dignissimos atque quia voluptas.",
+      "price": "174.00",
+      "quantity": 57231
+    },
+    {
+      "productTypeId": 8,
+      "userId": 5,
+      "name": "Unbranded Steel Bike",
+      "description": "Quos laborum rerum.",
+      "price": "959.00",
+      "quantity": 34432
+    },
+    {
+      "productTypeId": 4,
+      "userId": 3,
+      "name": "Unbranded Metal Chair",
+      "description": "Ratione omnis autem.",
+      "price": "374.00",
+      "quantity": 30561
+    },
+    {
+      "productTypeId": 7,
+      "userId": 2,
+      "name": "Practical Metal Shirt",
+      "description": "Iste sed qui dolore aut illo delectus.",
+      "price": "970.00",
+      "quantity": 306
+    },
+    {
+      "productTypeId": 5,
+      "userId": 2,
+      "name": "Unbranded Wooden Fish",
+      "description": "Distinctio velit doloremque amet mollitia voluptatibus.",
+      "price": "580.00",
+      "quantity": 28811
+    },
+    {
+      "productTypeId": 8,
+      "userId": 3,
+      "name": "Practical Steel Car",
+      "description":
+        "Dolores quia dolore sapiente ut officiis totam unde voluptatum.",
+      "price": "785.00",
+      "quantity": 68549
+    },
+    {
+      "productTypeId": 1,
+      "userId": 3,
+      "name": "Practical Plastic Bike",
+      "description": "Qui ex ea recusandae tenetur culpa.",
+      "price": "452.00",
+      "quantity": 40238
+    },
+    {
+      "productTypeId": 10,
+      "userId": 3,
+      "name": "Practical Wooden Gloves",
+      "description": "Consectetur aut et ut voluptatem consequatur ex.",
+      "price": "991.00",
+      "quantity": 74076
+    },
+    {
+      "productTypeId": 3,
+      "userId": 3,
+      "name": "Handcrafted Metal Hat",
+      "description": "Cupiditate similique et esse ut.",
+      "price": "197.00",
+      "quantity": 40131
+    },
+    {
+      "productTypeId": 6,
+      "userId": 5,
+      "name": "Handcrafted Fresh Sausages",
+      "description": "Iste quidem commodi.",
+      "price": "467.00",
+      "quantity": 30259
+    },
+    {
+      "productTypeId": 4,
+      "userId": 4,
+      "name": "Gorgeous Cotton Pants",
+      "description": "Alias ut sint magni.",
+      "price": "538.00",
+      "quantity": 45022
+    },
+    {
+      "productTypeId": 7,
+      "userId": 3,
+      "name": "Intelligent Granite Table",
+      "description": "Iusto ut id officia ea omnis.",
+      "price": "884.00",
+      "quantity": 37481
+    },
+    {
+      "productTypeId": 1,
+      "userId": 4,
+      "name": "Handcrafted Wooden Computer",
+      "description": "Sed enim quia.",
+      "price": "878.00",
+      "quantity": 9854
+    },
+    {
+      "productTypeId": 8,
+      "userId": 2,
+      "name": "Licensed Soft Table",
+      "description":
+        "Debitis est dolores magnam rerum veniam est rerum quisquam.",
+      "price": "973.00",
+      "quantity": 99990
+    },
+    {
+      "productTypeId": 1,
+      "userId": 5,
+      "name": "Generic Granite Computer",
+      "description": "Voluptatem ex repellendus.",
+      "price": "222.00",
+      "quantity": 39057
+    },
+    {
+      "productTypeId": 5,
+      "userId": 4,
+      "name": "Fantastic Wooden Shoes",
+      "description": "Odio ea libero.",
+      "price": "0.00",
+      "quantity": 43642
+    },
+    {
+      "productTypeId": 6,
+      "userId": 4,
+      "name": "Small Granite Pants",
+      "description": "Eos et non aut.",
+      "price": "635.00",
+      "quantity": 59135
+    },
+    {
+      "productTypeId": 3,
+      "userId": 2,
+      "name": "Unbranded Cotton Towels",
+      "description":
+        "Dolorum id qui odit voluptate aperiam omnis voluptatem alias.",
+      "price": "491.00",
+      "quantity": 33614
+    },
+    {
+      "productTypeId": 8,
+      "userId": 2,
+      "name": "Ergonomic Frozen Chicken",
+      "description": "Consectetur repellat et est.",
+      "price": "334.00",
+      "quantity": 64657
+    },
+    {
+      "productTypeId": 10,
+      "userId": 4,
+      "name": "Awesome Wooden Chicken",
+      "description": "Omnis recusandae iste quis inventore voluptatem quia.",
+      "price": "929.00",
+      "quantity": 80041
+    },
+    {
+      "productTypeId": 2,
+      "userId": 1,
+      "name": "Rustic Steel Tuna",
+      "description": "Enim aut veritatis non illo vitae totam unde unde.",
+      "price": "2.00",
+      "quantity": 67591
+    }
+  ]
+}
