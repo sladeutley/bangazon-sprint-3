@@ -5,7 +5,12 @@ module.exports = (sequelize, DataTypes) => {
     acct_num: DataTypes.INTEGER
   }, {tableName: "payment-types", timestamps: false});
   PaymentType.associate = function(models) {
-    foreignKey: "userId"
-  };
+    PaymentType.belongsTo(models.User, {
+      foreignKey: "userId"
+    });
+    PaymentType.belongsTo(models.Order, {
+      foreignKey: "paymentTypeId"
+    });
+  }
   return PaymentType;
 };

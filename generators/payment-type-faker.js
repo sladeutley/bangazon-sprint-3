@@ -10,11 +10,11 @@ module.exports.generatePaymentTypes = () => {
     payNum = Math.floor(Math.random() * paymentTypeArr.length);
     let name =  paymentTypeArr[payNum];
     let acct_num = faker.finance.account();
-    let user_id = faker.random.number({ min: 1, max: 5 });
+    let userId = faker.random.number({ min: 1, max: 5 });
     paymentTypes.push({
       name,
       acct_num,
-      user_id
+      userId
     });
   }
   return { paymentTypes };
