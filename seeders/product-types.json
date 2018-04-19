@@ -1,0 +1,34 @@
+{
+  "product-types": [
+    {
+      "name": "electronics"
+    },
+    {
+      "name": "apparel"
+    },
+    {
+      "name": "toys"
+    },
+    {
+      "name": "sports"
+    },
+    {
+      "name": "automotive"
+    },
+    {
+      "name": "jewelry"
+    },
+    {
+      "name": "health"
+    },
+    {
+      "name": "beauty"
+    },
+    {
+      "name": "outdoors"
+    },
+    {
+      "name": "kitchen"
+    }
+  ]
+}
