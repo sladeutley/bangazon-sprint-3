@@ -6,7 +6,7 @@ module.exports = (sequelize, DataTypes) => {
     {
       name: DataTypes.STRING
     },
-    { timestamp: false, tableName: 'product-types' }
+    { timestamp: false, tableName: 'productTypes' }
   );
   ProductType.associate = function(models) {
     // associations can be defined here
