@@ -7,8 +7,7 @@ module.exports = (sequelize, DataTypes) => {
     quantity: DataTypes.INTEGER
   }, 
   {
-   tableName: "products",
-   timestamps: false
+   tableName: "products"
   });
   Product.associate = function(models) {
     // associations can be defined here
