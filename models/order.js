@@ -1,13 +1,16 @@
-'use strict';
+"use strict";
 module.exports = (sequelize, DataTypes) => {
-  var Order = sequelize.define('Order', {}, { tableName: 'orders' });
+  var Order = sequelize.define("Order", {}, { tableName: "orders" });
   Order.associate = function(models) {
     Order.belongsTo(models.User, {
-      foreignKey: 'userId',
-      onDelete: 'CASCADE'
+      foreignKey: "userId",
+      onDelete: "CASCADE"
     });
     Order.belongsTo(models.PaymentType, {
-      foreignKey: 'paymentTypeId'
+      foreignKey: "paymentTypeId"
+    });
+    Order.belongsToMany(models.Product, {
+      through: "OrderProduct"
     });
   };
   return Order;

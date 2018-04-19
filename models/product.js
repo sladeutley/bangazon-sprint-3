@@ -1,7 +1,7 @@
-'use strict';
+"use strict";
 module.exports = (sequelize, DataTypes) => {
   var Product = sequelize.define(
-    'Product',
+    "Product",
     {
       name: DataTypes.STRING,
       description: DataTypes.STRING,
@@ -9,19 +9,22 @@ module.exports = (sequelize, DataTypes) => {
       quantity: DataTypes.INTEGER
     },
     {
-      tableName: 'products'
+      tableName: "products"
     }
   );
   Product.associate = function(models) {
     // associations can be defined here
     Product.belongsTo(models.ProductType, {
-      foreignKey: 'productTypeId',
-      onDelete: 'CASCADE'
+      foreignKey: "productTypeId",
+      onDelete: "CASCADE"
     });
     Product.belongsTo(models.User, {
-      foreignKey: 'userId',
-      as: 'Seller',
-      onDelete: 'CASCADE'
+      foreignKey: "userId",
+      as: "Seller",
+      onDelete: "CASCADE"
+    });
+    Product.belongsToMany(models.Order, {
+      through: "OrderProduct"
     });
   };
   return Product;
