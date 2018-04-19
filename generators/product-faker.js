@@ -22,5 +22,5 @@ module.exports.generateProducts = (typesLen, usersLen) => {
       quantity
     });
   }
-  return products;
+  return { products };
 };
