@@ -6,13 +6,13 @@ module.exports = (sequelize, DataTypes) => {
       name: DataTypes.STRING,
       acct_num: DataTypes.INTEGER
     },
-    { tableName: 'payment-types', timestamps: false }
+    { tableName: 'payment_types', timestamps: false }
   );
   PaymentType.associate = function(models) {
     PaymentType.belongsTo(models.User, {
       foreignKey: 'userId'
     });
-    PaymentType.belongsTo(models.Order, {
+    PaymentType.hasOne(models.Order, {
       foreignKey: 'paymentTypeId'
     });
   };

@@ -1,13 +1,17 @@
 'use strict';
 
 let models = require('./models');
-let { productTypes } = require('./seeders/product-types');
+let { users } = require('./seeders/users');
+let { productTypes } = require('./seeders/producttypes');
 let { paymentTypes } = require('./seeders/payment-types');
 let { products } = require('./seeders/products');
 let { orders } = require('./seeders/orders');
 
 models.sequelize
   .sync({ force: true })
+  .then(() => {
+    return models.User.bulkCreate(users);
+  })
   .then(() => {
     return models.ProductType.bulkCreate(productTypes);
   })
