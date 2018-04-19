@@ -1,0 +1,203 @@
+[
+  {
+    "productTypeId": 1,
+    "userId": 2,
+    "name": "Licensed Soft Pizza",
+    "description": "Quasi est saepe tempora.",
+    "price": "261.00",
+    "quantity": 84228
+  },
+  {
+    "productTypeId": 7,
+    "userId": 1,
+    "name": "Licensed Metal Keyboard",
+    "description": "Ex non ut.",
+    "price": "275.00",
+    "quantity": 18135
+  },
+  {
+    "productTypeId": 2,
+    "userId": 1,
+    "name": "Refined Steel Gloves",
+    "description": "Dignissimos ut labore veniam rerum aut.",
+    "price": "489.00",
+    "quantity": 72255
+  },
+  {
+    "productTypeId": 6,
+    "userId": 4,
+    "name": "Intelligent Wooden Cheese",
+    "description": "Delectus cupiditate quia quasi veritatis aut ut.",
+    "price": "796.00",
+    "quantity": 39566
+  },
+  {
+    "productTypeId": 1,
+    "userId": 3,
+    "name": "Fantastic Fresh Tuna",
+    "description": "In et quos placeat.",
+    "price": "751.00",
+    "quantity": 32014
+  },
+  {
+    "productTypeId": 10,
+    "userId": 2,
+    "name": "Handcrafted Soft Chips",
+    "description": "Doloremque sit voluptas et dolor id quo nihil quo iste.",
+    "price": "318.00",
+    "quantity": 88100
+  },
+  {
+    "productTypeId": 6,
+    "userId": 5,
+    "name": "Awesome Rubber Bike",
+    "description": "Totam eius quidem ex itaque explicabo eos et dolorum.",
+    "price": "104.00",
+    "quantity": 93756
+  },
+  {
+    "productTypeId": 7,
+    "userId": 2,
+    "name": "Small Fresh Mouse",
+    "description":
+      "Voluptas enim a id animi sequi voluptatum veritatis vel blanditiis.",
+    "price": "392.00",
+    "quantity": 24729
+  },
+  {
+    "productTypeId": 10,
+    "userId": 5,
+    "name": "Ergonomic Rubber Pizza",
+    "description": "Neque pariatur dicta sed at.",
+    "price": "401.00",
+    "quantity": 28837
+  },
+  {
+    "productTypeId": 3,
+    "userId": 2,
+    "name": "Licensed Granite Soap",
+    "description": "Quae magni accusamus deserunt et aliquid rerum.",
+    "price": "727.00",
+    "quantity": 51093
+  },
+  {
+    "productTypeId": 6,
+    "userId": 1,
+    "name": "Gorgeous Steel Cheese",
+    "description": "Placeat ipsa sit atque doloremque vero.",
+    "price": "764.00",
+    "quantity": 47199
+  },
+  {
+    "productTypeId": 5,
+    "userId": 5,
+    "name": "Small Fresh Pizza",
+    "description": "Unde nam enim.",
+    "price": "215.00",
+    "quantity": 72398
+  },
+  {
+    "productTypeId": 7,
+    "userId": 4,
+    "name": "Practical Plastic Table",
+    "description": "Soluta ut consequatur voluptatem veniam.",
+    "price": "902.00",
+    "quantity": 4042
+  },
+  {
+    "productTypeId": 5,
+    "userId": 4,
+    "name": "Unbranded Granite Car",
+    "description": "Ex fugiat facere error dolor pariatur expedita.",
+    "price": "82.00",
+    "quantity": 82999
+  },
+  {
+    "productTypeId": 4,
+    "userId": 2,
+    "name": "Gorgeous Metal Towels",
+    "description": "Porro magnam dolores rerum rem totam vel.",
+    "price": "207.00",
+    "quantity": 98804
+  },
+  {
+    "productTypeId": 1,
+    "userId": 4,
+    "name": "Ergonomic Soft Pizza",
+    "description": "Quaerat eos voluptas ducimus at est dicta.",
+    "price": "12.00",
+    "quantity": 69108
+  },
+  {
+    "productTypeId": 8,
+    "userId": 1,
+    "name": "Handmade Rubber Keyboard",
+    "description": "Corporis ea atque eum deserunt rem perferendis.",
+    "price": "751.00",
+    "quantity": 25769
+  },
+  {
+    "productTypeId": 10,
+    "userId": 2,
+    "name": "Tasty Granite Table",
+    "description": "Ut fugit recusandae perspiciatis sed quis ea placeat.",
+    "price": "111.00",
+    "quantity": 51831
+  },
+  {
+    "productTypeId": 3,
+    "userId": 3,
+    "name": "Gorgeous Fresh Shirt",
+    "description": "Natus eum repudiandae ab ea.",
+    "price": "452.00",
+    "quantity": 64185
+  },
+  {
+    "productTypeId": 2,
+    "userId": 2,
+    "name": "Incredible Fresh Soap",
+    "description": "Nostrum dolore ut est.",
+    "price": "123.00",
+    "quantity": 99250
+  },
+  {
+    "productTypeId": 7,
+    "userId": 1,
+    "name": "Fantastic Steel Bacon",
+    "description": "Soluta aut sapiente laudantium non nemo non.",
+    "price": "682.00",
+    "quantity": 15918
+  },
+  {
+    "productTypeId": 4,
+    "userId": 4,
+    "name": "Handcrafted Wooden Chips",
+    "description": "Numquam quos rem qui autem dolor dolores.",
+    "price": "461.00",
+    "quantity": 771
+  },
+  {
+    "productTypeId": 6,
+    "userId": 4,
+    "name": "Licensed Plastic Bacon",
+    "description": "Iusto aut cumque et rerum.",
+    "price": "500.00",
+    "quantity": 14145
+  },
+  {
+    "productTypeId": 6,
+    "userId": 5,
+    "name": "Ergonomic Wooden Car",
+    "description": "Voluptas error qui perspiciatis accusamus vitae.",
+    "price": "182.00",
+    "quantity": 57247
+  },
+  {
+    "productTypeId": 6,
+    "userId": 4,
+    "name": "Fantastic Soft Mouse",
+    "description": "Ipsum quia aut fugit assumenda voluptas laborum.",
+    "price": "457.00",
+    "quantity": 17518
+  }
+]

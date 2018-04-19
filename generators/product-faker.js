@@ -15,7 +15,7 @@ module.exports.generateProducts = (typesLen, usersLen) => {
 
     products.push({
       productTypeId,
-      customerId,
+      userId,
       name,
       description,
       price,
