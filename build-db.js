@@ -8,6 +8,9 @@ let { products } = require('./seeders/products');
 
 
 models.sequelize.sync({ force:true })
+.then(()=>{
+  return models.User.bulkCreate();
+})
 .then( () => {
   return models.PaymentType.bulkCreate(paymentTypes)
 })
