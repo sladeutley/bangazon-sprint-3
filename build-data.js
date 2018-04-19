@@ -1,7 +1,7 @@
 'use strict';
 const { createWriteStream } = require('fs');
 
-const { generateProducts } = require('generators/product-faker.js');
+const { generateProducts } = require('./generators/product-faker.js');
 
 // products
 let products = generateProducts(10, 5);
