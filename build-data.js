@@ -1,8 +1,15 @@
+
 'use strict';
 
 const { createWriteStream } = require('fs');
+
+const { generateOrders } = require('./generators/order-faker');
 const { generatePaymentTypes} = require('./generators/payment-type-faker');
 const { generateProducts } = require('./generators/product-faker.js');
+
+let orders = generateOrders();
+let orderStream = createWriteStream('./seeders/orders.json');
+orderStream.write(JSON.stringify(orders));
 
 // payment types
 let paymentTypes = generatePaymentTypes();
