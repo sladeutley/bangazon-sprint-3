@@ -1,0 +1,54 @@
+{
+  "paymentTypes": [
+    {
+      "name": "Visa",
+      "acct_num": "73278507",
+      "user_id": 3
+    },
+    {
+      "name": "Amex",
+      "acct_num": "52335615",
+      "user_id": 5
+    },
+    {
+      "name": "Amex",
+      "acct_num": "28881893",
+      "user_id": 2
+    },
+    {
+      "name": "Visa",
+      "acct_num": "39998901",
+      "user_id": 5
+    },
+    {
+      "name": "Visa",
+      "acct_num": "39130895",
+      "user_id": 4
+    },
+    {
+      "name": "Master Card",
+      "acct_num": "68849586",
+      "user_id": 2
+    },
+    {
+      "name": "Master Card",
+      "acct_num": "69576941",
+      "user_id": 2
+    },
+    {
+      "name": "Visa",
+      "acct_num": "90773375",
+      "user_id": 3
+    },
+    {
+      "name": "Amex",
+      "acct_num": "67845806",
+      "user_id": 1
+    },
+    {
+      "name": "Master Card",
+      "acct_num": "82369548",
+      "user_id": 4
+    }
+  ]
+}
