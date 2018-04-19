@@ -16,9 +16,10 @@ models.sequelize
   })
   .then(() => {
     return models.Product.bulkCreate(products);
+  })
+  .then(() => {
+    return models.Order.bulkCreate(orders);
+  })
+  .then(() => {
+    process.exit();
   });
-then(() => {
-  return models.Order.bulkCreate(orders);
-}).then(() => {
-  process.exit();
-});
