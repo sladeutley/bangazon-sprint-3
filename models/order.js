@@ -1,6 +1,5 @@
 'use strict';
-module.export
-s = (sequelize, DataTypes) => {
+module.exports= (sequelize, DataTypes) => {
   var Order = sequelize.define('Order', {}, {});
   Order.associate = function (models) {
     Order.belongsTo(models.User, {
