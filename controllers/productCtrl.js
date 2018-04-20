@@ -14,6 +14,23 @@ module.exports.getProductTypes = (req, res, next) => {
     });
 };
 
+// get a list of products that fall under a product type category
+module.exports.getProductsByProdTypeId = (req, res, next) => {
+  const { Product } = req.app.get('models');
+
+  Product.findAll({
+    raw: true,
+    where: { productTypeId: req.params.id }
+  })
+    .then(products => {
+      res.status(200).json(products);
+    })
+    .catch(err => {
+      console.log('Something went wrong!', err);
+      res.status(500).json({ error: err });
+    });
+};
+
 // get all products
 module.exports.getAllProducts = (req, res, next) => {
   const { Product } = req.app.get('models');
