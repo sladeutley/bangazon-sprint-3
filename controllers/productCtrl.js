@@ -1,12 +1,14 @@
 'use strict';
-module.exports.getAllProducts() => {
-app.get("/products", (req, res, next) => {
-  Product.findAll({include: [{model: Show, attributes: ["name"]}]})
-  .then( directors => {
-    res.status(200).json(directors);
-  })
-  .catch((err) => {
-    next(err);
-  });
-});
-}
+
+module.exports.getProductTypes = (req, res, next) => {
+  const { ProductType } = req.app.get('models');
+
+  ProductType.findAll()
+    .then(productTypes => {
+      res.status(200).json(productTypes);
+    })
+    .catch(err => {
+      console.log('Something went wrong!', err);
+      res.status(500).json({ error: err });
+    });
+};

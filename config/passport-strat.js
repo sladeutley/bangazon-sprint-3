@@ -135,6 +135,7 @@ passport.serializeUser((user, done) => {
 // We use Sequelize's findById to get the user. Then we use the Sequelize getter function, user.get(), to pass the user data to the 'done' function as an object, stripped of the sequelize instance methods, etc.
 passport.deserializeUser(({ id }, done) => {
   User.findById(id).then(user => {
+    console.log('deserialized-user: ', user);
     if (user) {
       done(null, user.get());
     } else {

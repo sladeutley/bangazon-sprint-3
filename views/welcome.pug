@@ -9,3 +9,9 @@ block content
       h1 #{messages.welcomeBackMsg} #{session.passport.user.first_name}
       //- This would be more permanent
       //- h1 Welcome back, #{session.passport.user.first_name}
+    form#addPayment(name="addPaymentType" method="post" action="/paymentTypesc")
+      label(for="name") Visa, MC, Amex....
+      input.text(id="name" name="name" type="text")
+      label(for="acct_num") Card Number....
+      input.text(name="acct_num" type="number")
+      input.btn(type="submit" value="Add Payment")
