@@ -12,6 +12,4 @@ router.use(require('./authRoute'));
 router.use(require('./productRoute'));
 router.use(require('./orderRoute'));
 
-// router.use(require('./foo'));
-
 module.exports = router;
