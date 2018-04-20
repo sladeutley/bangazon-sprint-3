@@ -14,7 +14,7 @@ module.exports.getProductTypes = (req, res, next) => {
     });
 };
 
-// get a list of products that fall under a product type category
+// get a list of products that match product type ID
 module.exports.getProductsByProdTypeId = (req, res, next) => {
   const { Product } = req.app.get('models');
 
