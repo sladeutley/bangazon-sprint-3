@@ -4,7 +4,7 @@ module.exports.getUserPaymentTypes = (req, res, next) => {
   // module.exports.getUserPaymentTypes = ({user: id}, res, next) => {
   const { PaymentType } = req.app.get("models");
 
-  PaymentType.findAll()({
+  PaymentType.findAll({
     where: {
       userId: req.user.id
     }
