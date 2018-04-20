@@ -7,6 +7,7 @@ module.exports.getUserPaymentTypes = (req, res, next) => {
   //   .then(paymentTypes => {
   //     res.status(200).json(paymentTypes);
   //   })
+  req.user.id
     .catch(err => {
       console.log("oopsies", err);
       res.status(500).json({ error: err });
