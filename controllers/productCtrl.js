@@ -61,3 +61,33 @@ module.exports.getProductById = (req, res, next) => {
       res.status(500).json({ error: err });
     });
 };
+
+// delete product from DB
+module.exports.deleteProduct = (req, res, next) => {
+  const { Product } = req.app.get('models');
+
+  Product.destroy({
+    where: { id: req.params.id }
+  })
+    .then(product => {
+      res.status(204).json(product);
+    })
+    .catch(err => {
+      console.log('Something went wrong!', err);
+      res.status(500).json({ error: err });
+    });
+};
+
+// post product to DB
+module.exports.postProduct = (req, res, next) => {
+  const { Product } = req.app.get('models');
+
+  Product.create(req.body)
+    .then(product => {
+      res.status(201).json(product);
+    })
+    .catch(err => {
+      console.log('Something went wrong!', err);
+      res.status(500).json({ error: err });
+    });
+};
