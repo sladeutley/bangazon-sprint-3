@@ -11,6 +11,4 @@ router.get('/', (req, res, next) => {
 router.use(require('./authRoute'));
 router.use(require('./productRoute'));
 
-// router.use(require('./foo'));
-
 module.exports = router;
