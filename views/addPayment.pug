@@ -1,0 +1,10 @@
+extends welcome.pug
+
+block content
+  form#addPayment(name="addPaymentType" method="post" action="/paymentTypes")
+    label(for="name") Visa, MC, Amex....
+    input.text(id="name" name="name" type="text")
+    label(for="acct_num") Card Number....
+    input.text(name="acct_num" type="number")
+    input.btn(type="submit" value="Add Payment")
+    

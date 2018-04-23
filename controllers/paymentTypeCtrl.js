@@ -1,17 +1,12 @@
 'use strict';
 
 module.exports.displayaddPaymentType = (req, res) => {
-  res.render('addPaymentType');
+  res.render('addPayment');
 };
 
 module.exports.postPaymentType = (req, res, next) => {
   const models = req.app.get('models');
   const { PaymentType } = models;
-// console.log('payment type=', PaymentType);
-console.log('req.session', req.session);
-console.log('USER', req.user);
-
-
   PaymentType.create({
     name: req.body.name,
     acct_num: req.body.acct_num,
