@@ -8,14 +8,15 @@ const {
   getProductTypes,
   getProductById,
   getAllProducts,
-  getProductsByUserId
+  getProductsByUserId,
+  countProductsOrdered
 } = require('../controllers/productCtrl.js');
 
 // routes for product types
 router.get('/prodTypes', getProductTypes);
 
 //routes for products
-router.get('/products/:id', getProductById);
+router.get('/products/:id', getProductById, countProductsOrdered);
 router.get('/products', getAllProducts);
 router.get('/userProducts', getProductsByUserId);
 
