@@ -29,6 +29,7 @@ module.exports.getProductsByUserId = (req, res, next) => {
     console.log('Something went wrong', err);
     res.status(500).json({ error: err});
   });
+};
 
 // get all products
 module.exports.getAllProducts = (req, res, next) => {
