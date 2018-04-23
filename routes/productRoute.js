@@ -10,7 +10,8 @@ const {
   getAllProducts,
   getProductsByProdTypeId,
   deleteProduct,
-  postProduct
+  postProduct,
+  displayProductForm
 } = require('../controllers/productCtrl.js');
 
 // routes for product types
@@ -21,6 +22,7 @@ router.get('/prodTypes/:id', getProductsByProdTypeId);
 router.get('/products', getAllProducts);
 router.get('/products/:id', getProductById);
 router.get('/productDelete/:id', deleteProduct);
-router.get('/productAdd', postProduct);
+router.post('/productAdd', postProduct);
+router.get('/new-product', displayProductForm);
 
 module.exports = router;

@@ -1,0 +1,9 @@
+extends welcome.pug
+
+block content
+  h1 Add New Product!
+  if message
+    h2= message
+  include partials/new-product-form.pug
+
+  

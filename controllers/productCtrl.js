@@ -1,5 +1,8 @@
 'use strict';
 
+module.exports.displayProductForm = (req, res) => {
+  res.render('new-product');
+};
 // get all product types
 module.exports.getProductTypes = (req, res, next) => {
   const { ProductType } = req.app.get('models');
