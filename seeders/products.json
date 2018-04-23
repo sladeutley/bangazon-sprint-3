@@ -12,7 +12,8 @@
       "productTypeId": 5,
       "userId": 1,
       "name": "Small Frozen Soap",
-      "description": "Accusantium dignissimos eius totam ad tempore mollitia magni ut.",
+      "description":
+        "Accusantium dignissimos eius totam ad tempore mollitia magni ut.",
       "price": "106.00",
       "quantity": 84188
     },
@@ -36,7 +37,8 @@
       "productTypeId": 6,
       "userId": 1,
       "name": "Awesome Steel Cheese",
-      "description": "Magni ut aut odit necessitatibus occaecati maxime harum quaerat.",
+      "description":
+        "Magni ut aut odit necessitatibus occaecati maxime harum quaerat.",
       "price": "837.00",
       "quantity": 48025
     },
@@ -92,7 +94,10 @@
       "productTypeId": 10,
       "userId": 2,
       "name": "Generic Wooden Chair",
-      "description": "Voluptatem deleniti perferendis consequatur sunt aspernatur ea asperiores.",
+
+      "description":
+        "Voluptatem deleniti perferendis consequatur sunt aspernatur ea asperiores.",
+
       "price": "626.00",
       "quantity": 52260
     },
@@ -100,7 +105,8 @@
       "productTypeId": 5,
       "userId": 5,
       "name": "Ergonomic Metal Towels",
-      "description": "Dolor dolorem tenetur vitae architecto unde eius debitis ut exercitationem.",
+      "description":
+        "Dolor dolorem tenetur vitae architecto unde eius debitis ut exercitationem.",
       "price": "14.00",
       "quantity": 73976
     },
@@ -108,7 +114,8 @@
       "productTypeId": 10,
       "userId": 1,
       "name": "Rustic Steel Gloves",
-      "description": "Et maiores hic pariatur voluptate porro necessitatibus sit.",
+      "description":
+        "Et maiores hic pariatur voluptate porro necessitatibus sit.",
       "price": "174.00",
       "quantity": 40536
     },
@@ -124,7 +131,8 @@
       "productTypeId": 9,
       "userId": 3,
       "name": "Licensed Rubber Chips",
-      "description": "Officiis consectetur in dolores nam quae sit quibusdam aut maxime.",
+      "description":
+        "Officiis consectetur in dolores nam quae sit quibusdam aut maxime.",
       "price": "426.00",
       "quantity": 49345
     },
@@ -132,7 +140,8 @@
       "productTypeId": 10,
       "userId": 5,
       "name": "Tasty Soft Computer",
-      "description": "Excepturi perferendis autem est voluptatum dolorum consequatur necessitatibus.",
+      "description":
+        "Excepturi perferendis autem est voluptatum dolorum consequatur necessitatibus.",
       "price": "536.00",
       "quantity": 15615
     },
@@ -156,7 +165,8 @@
       "productTypeId": 1,
       "userId": 1,
       "name": "Tasty Granite Towels",
-      "description": "Iusto illo qui laudantium distinctio ab explicabo harum officia.",
+      "description":
+        "Iusto illo qui laudantium distinctio ab explicabo harum officia.",
       "price": "203.00",
       "quantity": 91473
     },
@@ -180,7 +190,8 @@
       "productTypeId": 2,
       "userId": 1,
       "name": "Small Plastic Sausages",
-      "description": "Sequi placeat nulla minus velit rerum quo enim quibusdam quaerat.",
+      "description":
+        "Sequi placeat nulla minus velit rerum quo enim quibusdam quaerat.",
       "price": "942.00",
       "quantity": 44159
     },
