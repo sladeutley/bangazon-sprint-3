@@ -1,6 +1,7 @@
 'use strict';
 const passport = require('passport');
 
+
 // creating new users
 module.exports.displayRegister = (req, res) => {
   res.render('register');

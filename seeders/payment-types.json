@@ -1,1 +1,54 @@
-{"paymentTypes":[{"name":"Visa","acct_num":"92917387","userId":3},{"name":"Amex","acct_num":"86170115","userId":5},{"name":"Amex","acct_num":"46259771","userId":1},{"name":"Visa","acct_num":"24578969","userId":5},{"name":"Amex","acct_num":"23965219","userId":2},{"name":"Master Card","acct_num":"52069647","userId":2},{"name":"Amex","acct_num":"99519971","userId":3},{"name":"Amex","acct_num":"10814222","userId":4},{"name":"Master Card","acct_num":"30967322","userId":5},{"name":"Master Card","acct_num":"39965496","userId":5}]}
+{
+  "paymentTypes": [
+    {
+      "name": "Visa",
+      "acct_num": "92917387",
+      "userId": 3
+    },
+    {
+      "name": "Amex",
+      "acct_num": "86170115",
+      "userId": 5
+    },
+    {
+      "name": "Amex",
+      "acct_num": "46259771",
+      "userId": 1
+    },
+    {
+      "name": "Visa",
+      "acct_num": "24578969",
+      "userId": 5
+    },
+    {
+      "name": "Amex",
+      "acct_num": "23965219",
+      "userId": 2
+    },
+    {
+      "name": "Master Card",
+      "acct_num": "52069647",
+      "userId": 2
+    },
+    {
+      "name": "Amex",
+      "acct_num": "99519971",
+      "userId": 3
+    },
+    {
+      "name": "Amex",
+      "acct_num": "10814222",
+      "userId": 4
+    },
+    {
+      "name": "Master Card",
+      "acct_num": "30967322",
+      "userId": 5
+    },
+    {
+      "name": "Master Card",
+      "acct_num": "39965496",
+      "userId": 5
+    }
+  ]
+}
