@@ -1,5 +1,6 @@
 'use strict';
 
+// render form to add new product to DB
 module.exports.displayProductForm = (req, res) => {
   res.render('new-product');
 };
