@@ -3,7 +3,6 @@
 // get all product types
 module.exports.getProductTypes = (req, res, next) => {
   const { ProductType } = req.app.get('models');
-
   ProductType.findAll()
     .then(productTypes => {
       res.status(200).json(productTypes);
@@ -12,6 +11,24 @@ module.exports.getProductTypes = (req, res, next) => {
       console.log('Something went wrong!', err);
       res.status(500).json({ error: err });
     });
+};
+
+// get all of a user's products
+module.exports.getProductsByUserId = (req, res, next) => {
+  const { Product } = req.app.get('models');
+  console.log('req', req);
+  Product.findAll({
+    where: {
+      userId: req.user.id
+    }
+  })
+  .then(products => {
+    res.status(200).json(products);
+  })
+  .catch(err => {
+    console.log('Something went wrong', err);
+    res.status(500).json({ error: err});
+  });
 };
 
 // get all products
@@ -38,9 +55,26 @@ module.exports.getProductById = (req, res, next) => {
   })
     .then(product => {
       res.status(200).json(product);
+      next();
     })
     .catch(err => {
       console.log('Something went wrong!', err);
       res.status(500).json({ error: err });
     });
 };
+
+// count the amount of times a single product has been ordered
+module.exports.countProductsOrdered = (req, res, next) => {
+  const { OrderProduct } = req.app.get('models');
+  OrderProduct.count({
+    where: {
+      ProductId: req.params.id
+    }
+  }).then(products => {
+    console.log(`${products} products have been ordered`);
+  })
+  .catch(err => {
+    console.log('Something went wrong!', err);
+    res.status(500).json({ error: err });
+  });
+}
