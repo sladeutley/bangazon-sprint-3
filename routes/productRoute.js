@@ -7,14 +7,15 @@ const router = Router();
 const {
   getProductTypes,
   getProductById,
-  getAllProducts
+  getAllProducts,
+  countProductsOrdered
 } = require('../controllers/productCtrl.js');
 
 // routes for product types
 router.get('/prodTypes', getProductTypes);
 
 //routes for products
-router.get('/products/:id', getProductById);
+router.get('/products/:id', getProductById, countProductsOrdered);
 router.get('/products', getAllProducts);
 
 module.exports = router;
