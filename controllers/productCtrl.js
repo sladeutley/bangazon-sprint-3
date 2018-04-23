@@ -85,7 +85,16 @@ module.exports.deleteProduct = (req, res, next) => {
 module.exports.postProduct = (req, res, next) => {
   const { Product } = req.app.get('models');
 
-  Product.create(req.body)
+  Product.create({
+    name: req.body.name,
+    description: req.body.description,
+    price: req.body.price,
+    quantity: req.body.quantity,
+    createdAt: null,
+    updatedAt: null,
+    productTypeId: req.body.productTypeId,
+    userId: req.user.id
+  })
     .then(product => {
       res.status(201).json(product);
     })
