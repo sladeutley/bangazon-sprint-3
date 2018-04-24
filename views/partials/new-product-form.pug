@@ -1,0 +1,25 @@
+form#productNew(name="productNew" action="/productAdd", method="post")
+    label(for="name") Product Name
+    input(type="text" placeholder="name" name="name")
+    label(for="description") Description
+    input(type="text" placeholder="description" name="description")
+    label(for="price") Price
+    input(type="text" placeholder="price" name="price")
+    label(for="quantity") Quantity
+    input(type="text" placeholder="quantity" name="quantity")
+    label(for="productTypeId") Product Type
+    select(name="productTypeId")
+      option(value="1") Electronics
+      option(value="2") Apparel
+      option(value="3") Toys
+      option(value="4") Sports
+      option(value="5") Automotive
+      option(value="6") Jewelry
+      option(value="7") Health
+      option(value="8") Beauty
+      option(value="9") Outdoors
+      option(value="10") Kitchen
+      //- input(type="text" placeholder="productTypeId" name="productTypeId")
+    button(type="submit" value="Submit") Submit
+
+

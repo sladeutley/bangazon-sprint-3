@@ -9,3 +9,14 @@ block content
       h1 #{messages.welcomeBackMsg} #{session.passport.user.first_name}
       //- This would be more permanent
       //- h1 Welcome back, #{session.passport.user.first_name}
+  button#showProductForm Add New Product
+  button#addPayment Pay With New Card
+    script
+      include ../client/productClient.js
+      include ../client/clientAddPayment.js
+
+
+
+  
+
+
