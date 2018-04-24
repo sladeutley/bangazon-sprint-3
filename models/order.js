@@ -10,7 +10,12 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: 'paymentTypeId'
     });
     Order.belongsToMany(models.Product, {
-      through: 'OrderProduct'
+      through: {
+        model: 'OrderProduct',
+        unique: false
+      },
+      foreignKey: 'orderId',
+      constraints: false
     });
   };
   return Order;

@@ -1,13 +1,17 @@
+
 'use strict';
 
 const { Router } = require('express');
 
 const router = Router();
 
-const { getCurrentOrder, newOrder } = require('../controllers/orderCtrl');
+const { getCurrentOrder, addProductToOrder, completeOrder } = require('../controllers/orderCtrl');
 
-router.get('/currentOrder', getCurrentOrder);
 
-router.post('/orderAdd', newOrder);
+router.get('/orderdetail', getCurrentOrder);
+
+router.post('/orderProduct/:id', addProductToOrder);
+
+router.patch('/completeOrder', completeOrder);
 
 module.exports = router;
