@@ -8,11 +8,6 @@ block content
      each val in payments
        option(value=val.number) #{val.name} ending in #{val.account}
 
-  //- ul
-  //- //- iterates over paymentTypes retrieved from completeOrder in orderCTRL
-  //- each val in payments
-  //-   p.pay(id=val.number) #{val.number} #{val.name}, #{val.account}
-
   button#addPayment Add New Card
 
   script(src="https://code.jquery.com/jquery-3.2.1.min.js"
