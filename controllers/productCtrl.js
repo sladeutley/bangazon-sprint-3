@@ -126,7 +126,7 @@ module.exports.countProductsOrdered = (req, res, next) => {
   const { OrderProduct } = req.app.get('models');
   OrderProduct.count({
     where: {
-      ProductId: req.params.id
+      productId: req.params.id
     }
   })
     .then(products => {
