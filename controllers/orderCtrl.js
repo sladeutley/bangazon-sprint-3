@@ -5,10 +5,12 @@ const getProductsFromOrderProds = (req, res, currentOrder) => {
       include: [{ model: Order, where: { id: currentOrder } }]
     }).then(ordProds => {
       let prods = [];
+      let prodsTotal =0 ;
       for (let i = 0; i < ordProds.length; i++) {
-        prods.push(ordProds[i].name, ordProds[i].price)
+        prodsTotal += +ordProds[i].price;
+        prods.push({name: ordProds[i].name, price: ordProds[i].price})
       }
-      // res.json(prods);
+      prods.push(prodsTotal);
       resolve(prods);
     });
   });
@@ -37,6 +39,9 @@ module.exports.getCurrentOrder = (req, res) => {
   }).then(order => {
     getProductsFromOrderProds(req, res, order.id)
       .then(products => {
+        // prods = products.map(product => { return { name: product.name, price: product.price, total: products.t } })
+
+        // res.json(products);
         res.render('order', { order, payments, products });
       })
 
