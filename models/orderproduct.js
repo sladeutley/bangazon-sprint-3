@@ -3,9 +3,14 @@ module.exports = (sequelize, DataTypes) => {
   var OrderProduct = sequelize.define(
     'OrderProduct',
     {
-      orderProductId: DataTypes.INTEGER
+      id: {
+        allowNull: false,
+        type: DataTypes.INTEGER,
+        autoIncrement: true,
+        primaryKey: true,
+      } 
     },
-    { tableName: 'order_product' }
+    {}
   );
   OrderProduct.associate = function(models) {
     // associations can be defined here

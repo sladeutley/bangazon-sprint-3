@@ -14,7 +14,7 @@ module.exports.postPaymentType = (req, res, next) => {
     userId: req.user.id
   }).then(data => {
     console.log('new payment type = ', data);
-    res.json(data);
+    res.render('welcome', { data });
   })
   .catch(err => {
     res.status(500).json({ "error": err });
