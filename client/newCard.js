@@ -1,3 +1,3 @@
 document.getElementById('addCard').addEventListener('click', () => {
-  location.href = `${location.origin}/welcome`;
+  location.href = `${location.origin}/addPayment/orderdetail`;
 });
