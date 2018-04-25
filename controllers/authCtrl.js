@@ -73,7 +73,6 @@ module.exports.login = (req, res, next) => {
 };
 
 module.exports.welcome = (req, res, next) => {
-  req.flash('you did it!');
   res.render('welcome');
 };
 
