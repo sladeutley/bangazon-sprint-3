@@ -2,7 +2,7 @@
 module.exports.getCurrentOrder = (req, res) => {
   const { Order, PaymentType } = req.app.get('models');
   let payments;
-
+  //find all payment types for user
   PaymentType.findAll({
     where: {
       userId: req.user.id
@@ -10,7 +10,7 @@ module.exports.getCurrentOrder = (req, res) => {
   }).then(types => {
     payments = types.map(type => { return { number: type.id, name: type.name, account: type.acct_num } })
   })
-
+  //find current open order
   Order.findOne({
     where: {
       userId: req.user.id,
@@ -39,6 +39,7 @@ module.exports.newOrder = (req, res) => {
     })
 }
 
+//get find current order if it exists, if not create a new one, and create new orderProduct with orderId
 module.exports.addProductToOrder = (req, res, next) => {
   const { OrderProduct, Order } = req.app.get("models");
   Order.findOrCreate({
@@ -61,9 +62,9 @@ module.exports.addProductToOrder = (req, res, next) => {
     });
 };
 
+// get current order, and update with selected payment type
 module.exports.completeOrder = (req, res, next) => {
   const { Order } = req.app.get('models');
-  console.log(req.params, 'req params')
   Order.findOne({
     where: {
       userId: req.user.id,
