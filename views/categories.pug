@@ -1,0 +1,10 @@
+extends index.pug
+
+block content
+
+  h1 Categories
+    
+  each category in categories
+    ul
+      h3
+        a(href=(`/categories/${category.id}`)) #{category.name} (#{category.count})

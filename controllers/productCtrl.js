@@ -9,14 +9,45 @@ module.exports.displayProductForm = (req, res) => {
 module.exports.getProductTypes = (req, res, next) => {
   const { ProductType } = req.app.get('models');
   ProductType.findAll()
-    .then(productTypes => {
-      res.status(200).json(productTypes);
-    })
-    .catch(err => {
-      console.log('Something went wrong!', err);
-      res.status(500).json({ error: err });
+  .then(prodTypes => {
+    let categories = [];
+    prodTypes.forEach(type => {
+      countProductsInType(req, res, type.id)
+      .then(prodNum => {
+        console.log(type.name, prodNum );
+        categories.push(
+          {
+            id: type.id,
+            name: type.name,
+            count: prodNum
+          }
+        )
+      });
     });
+    console.log('CATEGORIES', categories);
+    setTimeout(function(){res.render('categories', { categories })}, 3000);
+  })
+  .catch(err => {
+    console.log('Something went wrong!', err);
+  });
 };
+
+const countProductsInType = (req, res, id) => {
+  const { Product } = req.app.get('models');
+  return new Promise((resolve, reject) => {
+    Product.count({
+      where: {
+        productTypeId: id
+      }
+    })
+    .then(prodNum => {
+      resolve(prodNum);
+    })
+    .catch(error => {
+      console.log('error', error);
+    });
+  });
+}
 
 // get a list of products that match product type ID
 module.exports.getProductsByProdTypeId = (req, res, next) => {
@@ -27,11 +58,10 @@ module.exports.getProductsByProdTypeId = (req, res, next) => {
     where: { productTypeId: req.params.id }
   })
     .then(products => {
-      res.status(200).json(products);
+      res.render('category-prods', { products });
     })
     .catch(err => {
       console.log('Something went wrong!', err);
-      res.status(500).json({ error: err });
     });
 };
 
