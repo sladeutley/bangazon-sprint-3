@@ -3,13 +3,11 @@ extends index.pug
 block content
 
   h1 This is the order page
-  //- p #{order}
-  ul
-  //- iterates over paymentTypes retrieved from completeOrder in orderCTRL
-  each val in payments
-    p.pay(id=val.number) #{val.number} #{val.name}, #{val.account}
+    select#pay
+      each val in payments
+        option(value=val.number) #{val.name}ending in#{val.account}
 
-  
+    p #{products}<br />
   script(src="https://code.jquery.com/jquery-3.2.1.min.js"
               integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
               crossorigin="anonymous")

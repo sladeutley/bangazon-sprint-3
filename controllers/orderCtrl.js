@@ -1,8 +1,26 @@
+const getProductsFromOrderProds = (req, res, currentOrder) => {
+  const { Order, Product } = req.app.get('models');
+  return new Promise((resolve, reject) => {
+    Product.findAll({
+      include: [{ model: Order, where: { id: currentOrder } }]
+    }).then(ordProds => {
+      let prods = [];
+      for (let i = 0; i < ordProds.length; i++) {
+        prods.push(ordProds[i].name, ordProds[i].price)
+      }
+      // res.json(prods);
+      resolve(prods);
+    });
+  });
+}
 
 module.exports.getCurrentOrder = (req, res) => {
   const { Order, PaymentType } = req.app.get('models');
   let payments;
+  let ordProds;
+  let currentOrder;
   //find all payment types for user
+
   PaymentType.findAll({
     where: {
       userId: req.user.id
@@ -17,13 +35,19 @@ module.exports.getCurrentOrder = (req, res) => {
       paymentTypeId: null
     }
   }).then(order => {
-    res.render('order', { order, payments });
+    getProductsFromOrderProds(req, res, order.id)
+      .then(products => {
+        res.render('order', { order, payments, products });
+      })
+
   })
     .catch(err => {
       console.log('Something went wrong!', err);
       res.status(500).json({ error: err });
     });
 }
+
+
 
 module.exports.newOrder = (req, res) => {
   const { Order } = req.app.get('models');
@@ -48,7 +72,6 @@ module.exports.addProductToOrder = (req, res, next) => {
       paymentTypeId: null
     }
   }).then(currentOrder => {
-    res.json(currentOrder);
     OrderProduct.create({
       orderId: currentOrder[0].id,
       productId: req.params.id
