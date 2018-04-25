@@ -67,7 +67,7 @@ module.exports.getAllProducts = (req, res, next) => {
 };
 
 // get a product by its ID
-module.exports.getProductById = (req, res, next) => {
+module.exports.displayProduct = (req, res, next) => {
   const { Product } = req.app.get('models');
 
   Product.findOne({
@@ -75,7 +75,7 @@ module.exports.getProductById = (req, res, next) => {
     where: { id: req.params.id }
   })
     .then(product => {
-      res.status(200).json(product);
+      res.render('product', { product });
       next();
     })
     .catch(err => {
@@ -126,7 +126,7 @@ module.exports.countProductsOrdered = (req, res, next) => {
   const { OrderProduct } = req.app.get('models');
   OrderProduct.count({
     where: {
-      ProductId: req.params.id
+      productId: req.params.id
     }
   })
     .then(products => {

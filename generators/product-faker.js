@@ -3,10 +3,6 @@
 const faker = require("faker");
 
 module.exports.generateProducts = (typesLen, usersLen) => {
-  console.log(typesLen, 'asdadas')
-  console.log(usersLen, 'asdadas')
-
-
   let products = [];
 
   for (let i = 0; i < 25; i++) {
