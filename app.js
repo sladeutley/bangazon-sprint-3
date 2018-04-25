@@ -8,6 +8,8 @@ let bodyParser = require('body-parser');
 // flash depend on session module to set temp values that persist briefly so we can set a value, kick off a new request, then have that value accessible on the request
 const flash = require('express-flash');
 
+app.use(express.static(__dirname + '/public'));
+
 require('dotenv').config();
 const port = process.env.PORT || 8080;
 
