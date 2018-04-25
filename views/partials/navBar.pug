@@ -7,12 +7,16 @@ nav#nav-bar
   h3
     a(class='myProducts' href='/my-products') My Products
 
-  h4 
+  h3 
+    a(class='categories' href='/categories') Product Categories
+
+  h3 
     a(class='cart' href='/orderdetail') Cart
+
 
   h5
     if session.passport
-      span #{session.passport.user.username}
+      span logged in as: #{session.passport.user.username}
       form(method="POST")
         <br>
           button(type="submit" formaction="/logout") logout
