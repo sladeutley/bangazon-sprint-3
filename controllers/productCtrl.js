@@ -68,7 +68,7 @@ module.exports.getAllProducts = (req, res, next) => {
 
   Product.findAll()
     .then(products => {
-      res.status(200).json(products);
+      res.render('welcome', { products });
     })
     .catch(err => {
       console.log('Something went wrong!', err);
