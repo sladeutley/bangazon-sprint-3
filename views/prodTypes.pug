@@ -1,0 +1,10 @@
+extends index.pug
+
+block content
+
+  h1 Product Categories
+  ul
+
+  each category in productTypes
+    p
+      a(href=`/prodTypes/${category.id}`) #{category.name}
