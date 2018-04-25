@@ -10,4 +10,7 @@ $('#addToOrder').click((e) => {
   })
     .done(() => {
     })
+  location.href = `${location.origin}/welcome`;
 });
+
+
