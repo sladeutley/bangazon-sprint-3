@@ -1,0 +1,14 @@
+extends index.pug
+
+block content
+
+  //- h1 #{} Products
+  h1 Hello
+
+  ul
+
+  each prod in products
+    p.
+      #{prod.name} <br>
+      #{prod.description} <br>
+      #{prod.price} <br>

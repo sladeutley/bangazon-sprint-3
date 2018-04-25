@@ -26,7 +26,8 @@ module.exports.getProductsByProdTypeId = (req, res, next) => {
     where: { productTypeId: req.params.id }
   })
     .then(products => {
-      res.status(200).json(products);
+      // res.status(200).json(products);
+      res.render('prodsByType', { products });
     })
     .catch(err => {
       console.log('Something went wrong!', err);
