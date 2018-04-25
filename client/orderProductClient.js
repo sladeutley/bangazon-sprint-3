@@ -10,6 +10,7 @@ $('#addToOrder').click((e) => {
   })
     .done(() => {
     })
+  alert('You have successfully added this product to your shopping cart!');
   location.href = `${location.origin}/orderdetail`;
 });
 
