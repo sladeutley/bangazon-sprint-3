@@ -5,19 +5,17 @@ html
     include stylesheets.pug
     title "Bangazon"
   body
+
     include partials/navbar.pug
     h1 Bangazon!
     h2 #{globalWow}
   
-
   block content
+    h1 Welcome to Bangazon!
     button#showLogin login
     button#showRegister register
     
-
-
     script    //- temp form
       include ../client/client.js
-    //- script(src="/bootstrap/js/bootstrap.min.js")
 
 
