@@ -1,9 +1,11 @@
-doctype html
+
 html
   head
-    title Bangazon!
+    meta(charset="utf-8")
+    include stylesheets.pug
+    title "Bangazon"
   body
-    include partials/nav.pug
+    include partials/navbar.pug
     h1 Bangazon!
     h2 #{globalWow}
   
@@ -16,3 +18,6 @@ html
 
     script    //- temp form
       include ../client/client.js
+    //- script(src="/bootstrap/js/bootstrap.min.js")
+
+
