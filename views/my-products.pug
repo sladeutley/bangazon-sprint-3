@@ -1,0 +1,13 @@
+extends welcome.pug
+
+block content
+  h1 My Products
+  if message
+    h2= message
+  ul
+  each prod in userProducts
+    li= prod.name
+    li= prod.description
+    li Price: $#{prod.price}
+    li Quantity: #{prod.quantity}
+    a(class='delete' href="/productDelete/"+prod.id) Delete

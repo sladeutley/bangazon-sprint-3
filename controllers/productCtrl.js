@@ -4,6 +4,7 @@
 module.exports.displayProductForm = (req, res) => {
   res.render('new-product');
 };
+
 // get all product types
 module.exports.getProductTypes = (req, res, next) => {
   const { ProductType } = req.app.get('models');
@@ -37,14 +38,23 @@ module.exports.getProductsByProdTypeId = (req, res, next) => {
 // get all of a user's products
 module.exports.getProductsByUserId = (req, res, next) => {
   const { Product } = req.app.get('models');
-  console.log('req', req);
+  let userProducts;
   Product.findAll({
     where: {
       userId: req.user.id
     }
   })
     .then(products => {
-      res.status(200).json(products);
+      userProducts = products.map(product => {
+        return {
+          id: product.id,
+          name: product.name,
+          description: product.description,
+          price: product.price,
+          quantity: product.quantity
+        };
+      });
+      res.render('my-products', { userProducts });
     })
     .catch(err => {
       console.log('Something went wrong', err);
