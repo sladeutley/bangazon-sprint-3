@@ -1,0 +1,18 @@
+nav#nav-bar
+
+
+  h1
+    a(class='goHomeBang' href='/') Bangazon! 
+
+  h3
+    a(class='myProducts' href='/new-product') My Products
+
+  h4 
+    a(class='cart' href='/order') Cart: 
+
+  h5
+    if session.passport
+      span #{session.passport.user.username}
+      form(method="POST")
+        <br>
+          button(type="submit" formaction="/logout") logout
