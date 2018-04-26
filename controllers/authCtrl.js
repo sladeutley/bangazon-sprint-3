@@ -1,5 +1,6 @@
 'use strict';
 const passport = require('passport');
+const flash = require('express-flash');
 
 
 // creating new users
@@ -69,6 +70,10 @@ module.exports.login = (req, res, next) => {
       res.redirect('/welcome');
     });
   })(req, res, next);
+};
+
+module.exports.welcome = (req, res, next) => {
+  res.render('welcome');
 };
 
 // logging out
