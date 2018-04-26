@@ -1,7 +1,8 @@
 # Welcome to Bangazon!
 
 ## 
-Bangazon is a store page build using Pug JS to render HTML from Node JS. Take a look around at our products, click one to view it's details, then add it to your cart! Once you have finished shopping, head to your cart to see what you have in there. Finally, select a payment type to complete the order. 
+Bangazon is a store page build using Pug JS to render HTML from Node JS. Take a look around at our products. If you have trouble finding something you'd like, check out the Product Categories section to filter through our product categories. Once you find what you'd like, click one to view it's details, then add it to your cart! Once you have finished shopping, head to your cart to see what you have in there. Finally, select a payment type to complete the order. 
+If you'd like to post your own product to sell, head to My Products to add your own products and to view what you currently have posted. 
 
 
 ### Dependencies 
