@@ -2,12 +2,18 @@ extends index.pug
 
 block content
 
-  h1 This is the order page  
-  h2 Select the card you would like to give us money with:  
-   select#pay
-     each val in payments
-       option(value=val.number) #{val.name} ending in #{val.account}
 
+  h1 This is the order page
+
+  each prod in products
+    p #{prod.name} #{prod.price}
+  p Total: $#{products[products.length-1]}
+
+
+  h2 Select the card you would like to give us money with:  
+  select#pay   
+    each val in payments
+      option(value=val.number) #{val.name}ending in#{val.account}
   button#addPayment Add New Card
 
   script(src="https://code.jquery.com/jquery-3.2.1.min.js"
