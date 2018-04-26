@@ -80,7 +80,7 @@ module.exports.addProductToOrder = (req, res, next) => {
     OrderProduct.create({
       orderId: currentOrder[0].id,
       productId: req.params.id
-    })
+    });
   }).then(newOrdProd => {
     res.status(201).json(newOrdProd)
   })

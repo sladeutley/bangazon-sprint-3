@@ -25,7 +25,7 @@ module.exports.getProductTypes = (req, res, next) => {
       });
     });
     console.log('CATEGORIES', categories);
-    setTimeout(function(){res.render('categories', { categories })}, 3000);
+    setTimeout(function(){res.render('categories', { categories })}, 300);
   })
   .catch(err => {
     console.log('Something went wrong!', err);
@@ -68,14 +68,23 @@ module.exports.getProductsByProdTypeId = (req, res, next) => {
 // get all of a user's products
 module.exports.getProductsByUserId = (req, res, next) => {
   const { Product } = req.app.get('models');
-  console.log('req', req);
+  let userProducts;
   Product.findAll({
     where: {
       userId: req.user.id
     }
   })
     .then(products => {
-      res.status(200).json(products);
+      userProducts = products.map(product => {
+        return {
+          id: product.id,
+          name: product.name,
+          description: product.description,
+          price: product.price,
+          quantity: product.quantity
+        };
+      });
+      res.render('my-products', { userProducts });
     })
     .catch(err => {
       console.log('Something went wrong', err);
@@ -123,7 +132,7 @@ module.exports.deleteProduct = (req, res, next) => {
     where: { id: req.params.id }
   })
     .then(product => {
-      res.status(204).json(product);
+      res.redirect('/my-products');
     })
     .catch(err => {
       console.log('Something went wrong!', err);
@@ -145,7 +154,7 @@ module.exports.postProduct = (req, res, next) => {
     userId: req.user.id
   })
     .then(product => {
-      res.status(201).json(product);
+      res.redirect('/my-products');
     })
     .catch(err => {
       console.log('Something went wrong!', err);
