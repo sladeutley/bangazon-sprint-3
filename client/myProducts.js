@@ -7,8 +7,7 @@ $('.delete').click(function(e) {
   //get order id from url
   //calls complete order function in orderCtrl
   $.ajax({
-    type: 'PATCH',
-    url: `/completeorder`,
-    data: { paymentType: pType }
-  }).done(order => {});
+    type: 'GET',
+    url: `/my-products`
+  });
 });
