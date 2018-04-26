@@ -1,16 +1,21 @@
-doctype html
+
 html
   head
-    title Bangazon!
+    meta(charset="utf-8")
+    include stylesheets.pug
+    title "Bangazon"
   body
-    include partials/nav.pug
 
+    include partials/navbar.pug
+    h1 Bangazon!
+    h2 #{globalWow}
+  
   block content
     h1 Welcome to Bangazon!
     button#showLogin login
     button#showRegister register
     
-
-
     script    //- temp form
       include ../client/client.js
+
+
