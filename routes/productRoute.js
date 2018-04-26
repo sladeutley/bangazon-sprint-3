@@ -13,7 +13,8 @@ const {
   postProduct,
   displayProductForm,
   getProductsByUserId,
-  countProductsOrdered
+  countProductsOrdered,
+  displayUserProductsPage
 } = require('../controllers/productCtrl.js');
 
 // routes for product types
@@ -23,9 +24,10 @@ router.get('/prodTypes/:id', getProductsByProdTypeId);
 //routes for products
 router.get('/welcome', getAllProducts);
 router.get('/productDelete/:id', deleteProduct);
-router.post('/productAdd', postProduct);
 router.get('/new-product', displayProductForm);
 router.get('/products/:id', displayProduct, countProductsOrdered);
-router.get('/userProducts', getProductsByUserId);
+router.get('/products', getAllProducts);
+router.post('/my-products', postProduct);
+router.get('/my-products', getProductsByUserId);
 
 module.exports = router;
