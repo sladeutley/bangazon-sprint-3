@@ -1,6 +1,7 @@
+
 $('#pay').change(function (e) {
   var value = $(this).val();
-  $(this).blur() // Firefox fix as suggested by AgDude
+  $(this).blur()
   var success = confirm('Are you sure you want to change your payment type?');
   if (success) {
     alert('changed');
@@ -17,3 +18,6 @@ $('#pay').change(function (e) {
     return false;
   }
 });
+
+
+
