@@ -1,12 +1,20 @@
-form#productNew(name="productNew" action="/productAdd", method="post")
+form#productNew(name="productNew" action="/my-products", method="post")
     label(for="name") Product Name
     input(type="text" placeholder="name" name="name")
+    br
+    br
     label(for="description") Description
     input(type="text" placeholder="description" name="description")
+    br
+    br
     label(for="price") Price
     input(type="text" placeholder="price" name="price")
+    br
+    br
     label(for="quantity") Quantity
     input(type="text" placeholder="quantity" name="quantity")
+    br
+    br
     label(for="productTypeId") Product Type
     select(name="productTypeId")
       option(value="1") Electronics
@@ -19,7 +27,6 @@ form#productNew(name="productNew" action="/productAdd", method="post")
       option(value="8") Beauty
       option(value="9") Outdoors
       option(value="10") Kitchen
-      //- input(type="text" placeholder="productTypeId" name="productTypeId")
+    br
+    br
     button(type="submit" value="Submit") Submit
-
-

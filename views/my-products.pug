@@ -1,0 +1,20 @@
+extends welcome.pug
+
+block content
+  h1 My Products
+  if message
+    h2= message
+  button#showProductForm Add New Product
+
+  each prod in userProducts
+    br
+    ul
+      h3= prod.name
+      h4= prod.description
+      p Price: $#{prod.price}
+      p Quantity: #{prod.quantity}
+      a(class='delete' href="/productDelete/"+prod.id) Delete
+    
+  
+  script
+    include ../client/myProducts.js
