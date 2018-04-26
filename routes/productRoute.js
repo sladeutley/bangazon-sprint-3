@@ -17,8 +17,8 @@ const {
 } = require('../controllers/productCtrl.js');
 
 // routes for product types
-router.get('/categories', getProductTypes);
-router.get('/categories/:id', getProductsByProdTypeId);
+router.get('/prodTypes', getProductTypes);
+router.get('/prodTypes/:id', getProductsByProdTypeId);
 
 //routes for products
 router.get('/welcome', getAllProducts);
