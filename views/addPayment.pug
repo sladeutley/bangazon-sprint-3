@@ -1,5 +1,4 @@
-extends welcome.pug
-//- need to change extend to currentOrder.pug to allow user to select payment type on order
+extends order.pug
 
 block content
   form#addPayment(name="addPaymentType" method="post" action="/paymentTypes")
@@ -7,5 +6,8 @@ block content
     input.text(id="name" name="name" type="text")
     label(for="acct_num") Card Number....
     input.text(name="acct_num" type="number")
-    input.btn(type="submit" value="Add Payment")
+    input.btn(id="addCard" type="submit" value="Add Payment")
+
+  script
+    include ../client/newCard.js
     

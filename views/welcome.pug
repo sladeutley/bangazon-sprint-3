@@ -11,8 +11,11 @@ block content
       p Qauntity: #{product.quantity}
       p $#{product.price}
 
-  button#showProductForm Add New Product
+
   button#addPayment Pay With New Card
   button#showUserProducts My Products
     script
       include ../client/clientAddPayment.js
+
+    script
+      include ../client/productClient.js
