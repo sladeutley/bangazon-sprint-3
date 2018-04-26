@@ -1,4 +1,5 @@
 extends order.pug
+//- need to change extend to currentOrder.pug to allow user to select payment type on order
 
 block content
   form#addPayment(name="addPaymentType" method="post" action="/paymentTypes")
@@ -9,5 +10,5 @@ block content
     input.btn(id="addCard" type="submit" value="Add Payment")
 
   script
-    include ../client/newCard.js
+    include ../client/newCard.js 
     

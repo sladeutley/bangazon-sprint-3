@@ -1,0 +1,19 @@
+body{
+  background-color: rgba(187, 219, 255, 0.63);
+  color: rgb(93, 94, 84);
+}
+
+
+/* NAV-BAR STYLES */
+#nav-bar{ 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: red;
+  background-color: rgb(255, 236, 125);
+}
+
+.goHomeBang{
+  font-size: 2em;
+}
+

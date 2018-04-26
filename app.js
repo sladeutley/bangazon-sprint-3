@@ -8,6 +8,8 @@ let bodyParser = require('body-parser');
 // flash depend on session module to set temp values that persist briefly so we can set a value, kick off a new request, then have that value accessible on the request
 const flash = require('express-flash');
 
+app.use(express.static(__dirname + '/public'));
+
 require('dotenv').config();
 const port = process.env.PORT || 8080;
 
@@ -17,7 +19,6 @@ app.set('models', require('./models')); //pulls in models/index.js by default. I
 // const { Computer } = req.app.get('models');
 
 app.set('view engine', 'pug');
-app.locals.globalWow = 'Express is, like, MAGIC'; //If we end up needing some value to be available to every pug template, look into using something like this that can be accessed in the templates just like any variable we pass directly to the template.
 
 let routes = require('./routes/');
 

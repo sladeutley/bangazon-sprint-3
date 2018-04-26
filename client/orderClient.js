@@ -1,10 +1,10 @@
-//event listener on payment types in order page
 
 $('#pay').change(function (e) {
   var value = $(this).val();
-  $(this).blur() // Firefox fix as suggested by AgDude
-  var success = confirm('Are you sure you want to change the Dropdown?');
+  $(this).blur()
+  var success = confirm('Are you sure you want to change your payment type?');
   if (success) {
+    alert('changed');
     //calls complete order function in orderCtrl
     $.ajax({
       type: "PATCH",
@@ -18,5 +18,6 @@ $('#pay').change(function (e) {
     return false;
   }
 });
+
 
 
