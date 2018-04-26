@@ -102,7 +102,7 @@ module.exports.deleteProduct = (req, res, next) => {
     where: { id: req.params.id }
   })
     .then(product => {
-      res.status(204).json(product);
+      res.redirect('/my-products');
     })
     .catch(err => {
       console.log('Something went wrong!', err);
@@ -124,7 +124,7 @@ module.exports.postProduct = (req, res, next) => {
     userId: req.user.id
   })
     .then(product => {
-      res.status(201).json(product);
+      res.redirect('/my-products');
     })
     .catch(err => {
       console.log('Something went wrong!', err);
